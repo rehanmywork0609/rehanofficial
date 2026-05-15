@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rehan — Digital Marketing Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --cream:#faf8f4;--cream2:#f3f0ea;--cream3:#e8e3d8;
+  --ink:#1a1814;--ink2:#3a3630;--ink3:#7a7470;
+  --gold:#b8973a;--gold2:#d4b05a;--gold-lt:#f8f0de;
+  --white:#ffffff;--border:#ddd8ce;
+}
+body{background:var(--cream);color:var(--ink);font-family:'Jost',sans-serif;font-weight:300;line-height:1.8;overflow-x:hidden;}
+
+/* scroll line */
+.sline{position:fixed;top:0;left:0;width:2px;background:var(--gold);z-index:9999;transition:height .1s linear;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 6%;background:rgba(250,248,244,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--ink);text-decoration:none;letter-spacing:.04em;}
+.logo em{color:var(--gold);font-style:italic;}
+.nlinks{display:flex;gap:2.5rem;list-style:none;}
+.nlinks a{color:var(--ink3);text-decoration:none;font-size:.77rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;transition:color .2s;}
+.nlinks a:hover{color:var(--gold);}
+.nhire{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--gold);border:1px solid var(--gold);padding:.5rem 1.5rem;text-decoration:none;transition:all .2s;}
+.nhire:hover{background:var(--gold);color:#fff;}
+
+/* HERO */
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 400px;align-items:stretch;}
+.hl{padding:10rem 6% 6rem;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--border);}
+.eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:1.8rem;display:flex;align-items:center;gap:1rem;}
+.eyebrow::before{content:'';width:36px;height:1px;background:var(--gold);}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,6.5vw,5.5rem);font-weight:300;line-height:1.05;letter-spacing:-.01em;margin-bottom:2rem;}
+h1 em{font-style:italic;color:var(--gold);}
+.hdesc{color:var(--ink3);font-size:.97rem;max-width:420px;line-height:1.9;border-left:2px solid var(--gold);padding-left:1.5rem;margin-bottom:2.8rem;}
+.hbtns{display:flex;gap:1.2rem;flex-wrap:wrap;}
+.bgold{background:var(--gold);color:#fff;padding:.85rem 2rem;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;text-decoration:none;border:1px solid var(--gold);display:inline-flex;align-items:center;gap:.5rem;transition:all .2s;}
+.bgold:hover{background:transparent;color:var(--gold);}
+.bghost{border:1px solid var(--border);color:var(--ink2);padding:.85rem 2rem;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:all .2s;}
+.bghost:hover{border-color:var(--gold);color:var(--gold);}
+
+.hr{background:var(--cream2);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8rem 2.5rem 4rem;gap:2.5rem;}
+.pframe{position:relative;width:230px;height:280px;}
+.pborder{position:absolute;inset:-8px;border:1px solid var(--gold);pointer-events:none;}
+.pdot{position:absolute;top:-8px;left:-8px;width:12px;height:12px;background:var(--gold);}
+.pinner{width:100%;height:100%;background:var(--cream3);overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.6rem;}
+.pinner img{width:100%;height:100%;object-fit:cover;display:block;}
+.pph{display:flex;flex-direction:column;align-items:center;gap:.7rem;padding:1rem;}
+.pph i{font-size:2.2rem;color:var(--ink3);opacity:.35;}
+.pph span{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);}
+.uplbl{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold);padding:.3rem .8rem;cursor:pointer;transition:all .2s;}
+.uplbl:hover{background:var(--gold);color:#fff;}
+.pcaption{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--ink3);text-align:center;line-height:1.6;}
+.hnums{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);}
+.nbox{background:var(--cream2);padding:1.2rem 1rem;text-align:center;}
+.nval{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600;color:var(--gold);display:block;line-height:1;}
+.nlbl{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:.25rem;}
+
+/* SECTIONS */
+section{padding:7rem 6%;position:relative;}
+.si{max-width:1160px;margin:0 auto;}
+.smark{display:flex;align-items:center;gap:1.2rem;margin-bottom:1rem;}
+.snum{font-family:'Cormorant Garamond',serif;font-size:.85rem;color:var(--gold);letter-spacing:.1em;}
+.sline2{flex:1;height:1px;background:var(--border);}
+.slbl{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);font-weight:500;}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;letter-spacing:-.01em;line-height:1.1;color:var(--ink);margin-bottom:1rem;}
+h2 em{font-style:italic;color:var(--gold);}
+.ssub{color:var(--ink3);max-width:480px;margin-bottom:4rem;font-size:.93rem;}
+
+/* ABOUT */
+#about{background:var(--white);}
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.atext p{color:var(--ink3);margin-bottom:1.1rem;font-size:.95rem;line-height:1.9;}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:2rem;border:1px solid var(--border);}
+.dc{padding:.9rem 1.1rem;border-bottom:1px solid var(--border);border-right:1px solid var(--border);}
+.dc:nth-child(even){border-right:none;}
+.dc:nth-last-child(-n+2){border-bottom:none;}
+.dclbl{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:500;}
+.dcval{font-size:.87rem;color:var(--ink2);margin-top:.2rem;}
+
+.estack{display:flex;flex-direction:column;}
+.eitem{padding:1.5rem 1.6rem;border:1px solid var(--border);margin-bottom:-1px;position:relative;transition:border-color .2s;}
+.eitem:hover{border-color:var(--gold);z-index:1;}
+.eitem::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);}
+.eyear{font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem;}
+.etitle{font-family:'Cormorant Garamond',serif;font-size:1.08rem;font-weight:600;color:var(--ink);margin-bottom:.2rem;}
+.eschool{font-size:.8rem;color:var(--ink3);}
+
+/* SKILLS */
+#skills{background:var(--cream);}
+.sklayout{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start;}
+.skintro p{color:var(--ink3);font-size:.93rem;line-height:1.9;margin-bottom:1rem;}
+.skcols{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);}
+.skrow{display:flex;align-items:center;gap:1.1rem;padding:1.1rem 1.3rem;border-bottom:1px solid var(--border);border-right:1px solid var(--border);transition:background .2s;cursor:default;}
+.skrow:nth-child(even){border-right:none;}
+.skrow:nth-last-child(-n+2){border-bottom:none;}
+.skrow:hover{background:var(--gold-lt);}
+.skico{width:34px;height:34px;flex-shrink:0;background:var(--gold-lt);display:flex;align-items:center;justify-content:center;font-size:.95rem;}
+.skname{font-size:.86rem;font-weight:500;color:var(--ink);}
+.sksub{font-size:.7rem;color:var(--ink3);margin-top:.1rem;}
+.sklvl{margin-left:auto;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:500;white-space:nowrap;}
+
+/* PORTFOLIO */
+#portfolio{background:var(--white);}
+.tabbar{display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:3rem;}
+.tbtn{padding:.75rem 1.8rem;font-size:.73rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border:none;background:none;color:var(--ink3);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .2s;font-family:'Jost',sans-serif;}
+.tbtn.on{color:var(--gold);border-bottom-color:var(--gold);}
+.tbtn:hover:not(.on){color:var(--ink);}
+.tpanel{display:none;}
+.tpanel.on{display:block;}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);}
+.pcard{background:var(--white);padding:2rem;position:relative;transition:background .2s;}
+.pcard:hover{background:var(--cream);}
+.pcnum{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--cream3);position:absolute;top:1.2rem;right:1.5rem;line-height:1;}
+.pccat{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:.7rem;}
+.pctitle{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--ink);margin-bottom:.7rem;line-height:1.3;}
+.pcdesc{color:var(--ink3);font-size:.84rem;line-height:1.8;margin-bottom:1.1rem;}
+.pcmets{display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.1rem;}
+.pcm .mv{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold);display:block;}
+.pcm .ml{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);}
+.pctags{display:flex;flex-wrap:wrap;gap:.4rem;}
+.pctag{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--border);color:var(--ink3);padding:.2rem .6rem;}
+.pclink{display:inline-flex;align-items:center;gap:.4rem;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;font-weight:500;margin-top:.9rem;transition:gap .2s;}
+.pclink:hover{gap:.7rem;}
+
+/* TOOLS */
+#tools{background:var(--cream2);}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);}
+.tbox{background:var(--cream2);padding:1.4rem 1rem;text-align:center;transition:background .2s;cursor:default;}
+.tbox:hover{background:var(--gold-lt);}
+.tico{font-size:1.5rem;margin-bottom:.55rem;}
+.tn{font-size:.78rem;font-weight:500;color:var(--ink);}
+.tcat{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-top:.2rem;}
+
+/* CONTACT */
+#contact{background:var(--ink);}
+#contact h2,#contact .snum{color:var(--cream2);}
+#contact .sline2{background:rgba(255,255,255,.1);}
+#contact .slbl{color:var(--ink3);}
+#contact .ssub{color:var(--ink3);}
+.clayout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.citems{display:flex;flex-direction:column;}
+.citem{display:flex;align-items:center;gap:1.2rem;padding:1.1rem 0;border-bottom:1px solid rgba(255,255,255,.07);text-decoration:none;color:var(--cream2);transition:color .2s;}
+.citem:hover{color:var(--gold2);}
+.cico{width:36px;height:36px;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem;color:var(--gold);transition:border-color .2s;}
+.citem:hover .cico{border-color:var(--gold);}
+.clbl{font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);}
+.cval{font-size:.88rem;margin-top:.1rem;}
+.flbl{display:block;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:.35rem;font-weight:500;}
+.fg{margin-bottom:.9rem;}
+.finput{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.11);padding:.75rem 1rem;color:var(--cream2);font-family:'Jost',sans-serif;font-size:.87rem;outline:none;transition:border-color .2s;}
+.finput::placeholder{color:rgba(255,255,255,.18);}
+.finput:focus{border-color:var(--gold);}
+.fta{min-height:95px;resize:vertical;}
+.bsend{width:100%;background:var(--gold);color:#fff;border:none;padding:.95rem;font-family:'Jost',sans-serif;font-size:.73rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:background .2s;}
+.bsend:hover{background:var(--gold2);}
+
+/* FOOTER */
+footer{background:var(--ink2);padding:1.8rem 6%;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.06);flex-wrap:wrap;gap:1rem;}
+.flogo{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--cream2);font-style:italic;}
+.fnote{font-size:.7rem;letter-spacing:.06em;color:var(--ink3);}
+.fls{display:flex;gap:1.4rem;}
+.fls a{font-size:.7rem;letter-spacing:.07em;color:var(--ink3);text-decoration:none;transition:color .2s;}
+.fls a:hover{color:var(--gold);}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+@media(max-width:960px){
+  #hero{grid-template-columns:1fr;}
+  .hr{display:none;}
+  .agrid,.clayout,.sklayout{grid-template-columns:1fr;gap:3rem;}
+  nav .nlinks{display:none;}
+}
+@media(max-width:600px){
+  section{padding:4rem 5%;}
+  .skcols{grid-template-columns:1fr;}
+  .skrow:nth-child(even){border-right:1px solid var(--border);}
+}
+</style>
+</head>
+<body>
+
+<div class="sline" id="sl"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="logo">R<em>ehan</em></a>
+  <ul class="nlinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#portfolio">Work</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nhire">Hire Me</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hl">
+    <div class="eyebrow">Digital Marketing Specialist</div>
+    <h1>Crafting<br>campaigns<br>that <em>convert</em></h1>
+    <p class="hdesc">Strategic SEO, data-driven Google Ads, and high-impact Meta campaigns — turning digital presence into measurable growth.</p>
+    <div class="hbtns">
+      <a href="#portfolio" class="bgold">View My Work <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+      <a href="#contact" class="bghost"><i class="fa-solid fa-envelope fa-xs"></i> Get In Touch</a>
+    </div>
+  </div>
+  <div class="hr">
+    <div class="pframe">
+      <div class="pborder"></div>
+      <div class="pdot"></div>
+      <div class="pinner" id="pinner">
+        <div class="pph">
+          <i class="fa-regular fa-user"></i>
+          <span>Your Photo Here</span>
+          <label class="uplbl" for="pup">Upload</label>
+          <input type="file" id="pup" accept="image/*" style="display:none"/>
+        </div>
+      </div>
+    </div>
+    <p class="pcaption">Rehan<br><span style="font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-family:'Jost',sans-serif;color:var(--gold);">Digital Marketing Graduate</span></p>
+    <div class="hnums">
+      <div class="nbox"><span class="nval">3+</span><div class="nlbl">SEO Projects</div></div>
+      <div class="nbox"><span class="nval">5+</span><div class="nlbl">Ad Campaigns</div></div>
+      <div class="nbox"><span class="nval">10+</span><div class="nlbl">Tools Mastered</div></div>
+      <div class="nbox"><span class="nval">∞</span><div class="nlbl">Growth Mindset</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="si">
+    <div class="smark"><span class="snum">01</span><div class="sline2"></div><span class="slbl">About Me</span></div>
+    <h2>The person<br>behind the <em>strategy</em></h2>
+    <div class="agrid">
+      <div class="atext reveal">
+        <p>I'm <strong>Rehan</strong> — a Digital Marketing graduate with a sharp eye for organic growth and paid performance. Though I'm building my client base, every project reflects genuine strategy, not just textbook theory.</p>
+        <p>My approach rests on three pillars: understanding the audience, letting data guide decisions, and crafting messages that actually connect. From technical SEO audits to Meta ad funnels, I work across the full digital spectrum.</p>
+        <p>Certified in Google Ads and Meta Blueprint, and hands-on with industry-standard platforms to prove my skills where it counts.</p>
+        <div class="dgrid" style="margin-top:2.2rem;">
+          <div class="dc"><div class="dclbl">Full Name</div><div class="dcval">Rehan</div></div>
+          <div class="dc"><div class="dclbl">Location</div><div class="dcval">India · Remote Ready</div></div>
+          <div class="dc"><div class="dclbl">Email</div><div class="dcval">rehan@email.com</div></div>
+          <div class="dc"><div class="dclbl">Phone</div><div class="dcval">+91 00000 00000</div></div>
+          <div class="dc"><div class="dclbl">Languages</div><div class="dcval">English, Hindi, Urdu</div></div>
+          <div class="dc"><div class="dclbl">Status</div><div class="dcval" style="color:var(--gold)">Open to Work</div></div>
+        </div>
+      </div>
+      <div class="estack reveal d2">
+        <div class="eitem"><div class="eyear">2021 – 2025</div><div class="etitle">Bachelor's in Digital Marketing</div><div class="eschool">Your University / College Name</div></div>
+        <div class="eitem"><div class="eyear">2024 · Google Skillshop</div><div class="etitle">Google Ads Certification</div><div class="eschool">Search · Display · Performance Max</div></div>
+        <div class="eitem"><div class="eyear">2024 · Meta</div><div class="etitle">Meta Blueprint Certification</div><div class="eschool">Facebook & Instagram Ads</div></div>
+        <div class="eitem"><div class="eyear">Ongoing</div><div class="etitle">GA4 Certification</div><div class="eschool">Google Skillshop</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="si">
+    <div class="smark"><span class="snum">02</span><div class="sline2"></div><span class="slbl">Expertise</span></div>
+    <h2>Core <em>skills</em></h2>
+    <div class="sklayout">
+      <div class="skintro reveal">
+        <p>A complete digital marketing skill set — spanning search, social, technical, and analytics — built for modern performance marketing.</p>
+        <p>Each skill has been applied through hands-on projects, dummy campaigns, and real tool-based practice.</p>
+      </div>
+      <div class="skcols reveal d2">
+        <div class="skrow"><div class="skico">🔍</div><div><div class="skname">On-Page SEO</div><div class="sksub">Meta, Headings, Schema, Links</div></div><div class="sklvl">Expert</div></div>
+        <div class="skrow"><div class="skico">🔗</div><div><div class="skname">Off-Page SEO</div><div class="sksub">Link Building, Guest Posts</div></div><div class="sklvl">Advanced</div></div>
+        <div class="skrow"><div class="skico">⚙️</div><div><div class="skname">Technical SEO</div><div class="sksub">Core Web Vitals, Speed</div></div><div class="sklvl">Advanced</div></div>
+        <div class="skrow"><div class="skico">📢</div><div><div class="skname">Google Ads · SEM</div><div class="sksub">Search, Display, PMax</div></div><div class="sklvl">Advanced</div></div>
+        <div class="skrow"><div class="skico">📱</div><div><div class="skname">Meta Ads · SMM</div><div class="sksub">Facebook, Instagram, Reels</div></div><div class="sklvl">Advanced</div></div>
+        <div class="skrow"><div class="skico">📊</div><div><div class="skname">Web Analytics</div><div class="sksub">GA4, GSC, Looker Studio</div></div><div class="sklvl">Proficient</div></div>
+        <div class="skrow"><div class="skico">✍️</div><div><div class="skname">SEO Content</div><div class="sksub">Blogs, Copywriting</div></div><div class="sklvl">Proficient</div></div>
+        <div class="skrow"><div class="skico">🎯</div><div><div class="skname">Keyword Research</div><div class="sksub">Intent Mapping, Competitor</div></div><div class="sklvl">Expert</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="si">
+    <div class="smark"><span class="snum">03</span><div class="sline2"></div><span class="slbl">Portfolio</span></div>
+    <h2>Selected <em>work</em></h2>
+    <p class="ssub">Proof-of-concept projects and dummy site case studies demonstrating real strategies and results.</p>
+    <div class="tabbar">
+      <button class="tbtn on" onclick="openTab('seo',this)">SEO Projects</button>
+      <button class="tbtn" onclick="openTab('sem',this)">Google Ads · SEM</button>
+      <button class="tbtn" onclick="openTab('smm',this)">Meta Ads · SMM</button>
+    </div>
+
+    <!-- SEO -->
+    <div class="tpanel on" id="tab-seo">
+      <div class="pgrid">
+        <div class="pcard reveal"><div class="pcnum">01</div><div class="pccat">On-Page SEO</div><div class="pctitle">E-Commerce On-Page Overhaul</div><div class="pcdesc">Full audit and implementation for a dummy e-commerce site — title tags, meta descriptions, heading hierarchy, image alt text, internal linking, and JSON-LD schema markup.</div><div class="pcmets"><div class="pcm"><span class="mv">+60%</span><div class="ml">Visibility</div></div><div class="pcm"><span class="mv">40+</span><div class="ml">Keywords</div></div></div><div class="pctags"><span class="pctag">Schema</span><span class="pctag">Meta Tags</span><span class="pctag">Internal Links</span></div><a href="#" class="pclink">View Case Study <i class="fa-solid fa-arrow-right fa-xs"></i></a></div>
+        <div class="pcard reveal d1"><div class="pcnum">02</div><div class="pccat">Off-Page SEO</div><div class="pctitle">Domain Authority Link Building</div><div class="pcdesc">Strategic off-page campaign including guest posting, directory submissions, social bookmarking, and broken link building for a dummy blog to grow domain authority.</div><div class="pcmets"><div class="pcm"><span class="mv">DA+15</span><div class="ml">Increase</div></div><div class="pcm"><span class="mv">30+</span><div class="ml">Backlinks</div></div></div><div class="pctags"><span class="pctag">Guest Posts</span><span class="pctag">Backlinks</span><span class="pctag">Directories</span></div><a href="#" class="pclink">View Proof <i class="fa-solid fa-arrow-right fa-xs"></i></a></div>
+        <div class="pcard reveal d2"><div class="pcnum">03</div><div class="pccat">Technical SEO</div><div class="pctitle">Core Web Vitals & Speed Optimization</div><div class="pcdesc">Diagnosed and resolved technical SEO issues — page speed, mobile-friendliness, crawl errors, sitemap, robots.txt, canonicalization, and Core Web Vitals using PageSpeed Insights and GSC.</div><div class="pcmets"><div class="pcm"><span class="mv">92</span><div class="ml">PageSpeed</div></div><div class="pcm"><span class="mv">Zero</span><div class="ml">Crawl Errors</div></div></div><div class="pctags"><span class="pctag">Core Web Vitals</span><span class="pctag">Sitemap</span><span class="pctag">Robots.txt</span></div><a href="#" class="pclink">View Report <i class="fa-solid fa-arrow-right fa-xs"></i></a></div>
+      </div>
+    </div>
+
+    <!-- SEM -->
+    <div class="tpanel" id="tab-sem">
+      <div class="pgrid">
+        <div class="pcard reveal"><div class="pcnum">01</div><div class="pccat">Google Search Ads</div><div class="pctitle">Local Business Lead Gen Campaign</div><div class="pcdesc">Complete Google Search Ads campaign for a fictional local business — keyword research, RSA ad copy, bidding strategy, ad extensions, and Quality Score optimization.</div><div class="pcmets"><div class="pcm"><span class="mv">7.2%</span><div class="ml">CTR</div></div><div class="pcm"><span class="mv">QS 8</span><div class="ml">Quality Score</div></div><div class="pcm"><span class="mv">₹12</span><div class="ml">CPC</div></div></div><div class="pctags"><span class="pctag">RSA</span><span class="pctag">Extensions</span><span class="pctag">Negative KWs</span></div><a href="#" class="pclink">View Campaign <i class="fa-solid fa-arrow-right fa-xs"></i></a></div>
+        <div class="pcard reveal d1"><div class="pcnum">02</div><div class="pccat">Google Display · GDN</div><div class="pctitle">Display Network Brand Awareness</div><div class="pcdesc">GDN campaign targeting custom audiences and in-market segments to build brand visibility for a demo e-commerce brand across Google's display network.</div><div class="pcmets"><div class="pcm"><span class="mv">50K+</span><div class="ml">Impressions</div></div><div class="pcm"><span class="mv">2.1%</span><div class="ml">CTR</div></div></div><div class="pctags"><span class="pctag">Custom Audiences</span><span class="pctag">Remarketing</span></div><a href="#" class="pclink">View Campaign <i class="fa-solid fa-arrow-right fa-xs"></i></a></div>
+        <div class="pcard reveal d2"><div class="pcnum">03</div><div class="pccat">Performance Max</div><div class="pctitle">PMax E-Commerce Sales Campaign</div><div class="pcdesc">Performance Max campaign with asset groups, audience signals, and conversion goals for a fictional online store — leveraging Google AI across all channels simultaneously.</div><div class="pcmets"><div class="pcm"><span class="mv">4.5x</span><div class="ml">ROAS</div></div><div class="pcm"><span class="mv">₹8</span><div class="ml">CPA</div></div></div><div class="pctags"><span class="pctag">PMax</span><span class="pctag">Asset Groups</span><span class="pctag">Signals</span></div><a href="#" class="pclink">View Campaign <i class="fa-solid fa-arrow-right fa-xs"></i></a></div>
+      </div>
+    </div>
+
+    <!-- SMM -->
+    <div class="tpanel" id="tab-smm">
+      <div class="pgrid">
+        <div class="pcard reveal"><div class="pcnum">01</div><div class="pccat">Meta Ads · Facebook</div><div class="pctitle">Real Estate Lead Gen Campaign</div><div class="pcdesc">End-to-end Meta lead generation campaign using Instant Forms, Lookalike Audiences, and A/B tested creatives for a fictional real estate brand on Facebook.</div><div class="pcmets"><div class="pcm"><span class="mv">80+</span><div class="ml">Leads</div></div><div class="pcm"><span class="mv">₹45</span><div class="ml">CPL</div></div><div class="pcm"><span class="mv">3.8%</span><div class="ml">CVR</div></div></div><div class="pctags"><span class="pctag">Instant Forms</span><span class="pctag">Lookalike</span><span class="pctag">A/B Test</span></div><a href="#" class="pclink">View Campaign <i class="fa-solid fa-arrow-right fa-xs"></i></a></div>
+        <div class="pcard reveal d1"><div class="pcnum">02</div><div class="pccat">Meta Ads · Instagram</div><div class="pctitle">Fashion Brand Awareness Campaign</div><div class="pcdesc">Awareness and traffic campaigns using Reels ads, Stories, and carousel formats targeting interest-based and custom audiences for a demo fashion brand on Instagram.</div><div class="pcmets"><div class="pcm"><span class="mv">100K+</span><div class="ml">Reach</div></div><div class="pcm"><span class="mv">5.2%</span><div class="ml">Engagement</div></div></div><div class="pctags"><span class="pctag">Reels Ads</span><span class="pctag">Carousel</span><span class="pctag">Stories</span></div><a href="#" class="pclink">View Campaign <i class="fa-solid fa-arrow-right fa-xs"></i></a></div>
+        <div class="pcard reveal d2"><div class="pcnum">03</div><div class="pccat">Meta · Retargeting</div><div class="pctitle">Cart Abandonment Retargeting Funnel</div><div class="pcdesc">Pixel-based retargeting funnel to re-engage visitors who abandoned carts, using dynamic product ads and discount creatives for a demo Shopify store.</div><div class="pcmets"><div class="pcm"><span class="mv">6x</span><div class="ml">ROAS</div></div><div class="pcm"><span class="mv">22%</span><div class="ml">Recovery Rate</div></div></div><div class="pctags"><span class="pctag">Meta Pixel</span><span class="pctag">DPA</span><span class="pctag">Retargeting</span></div><a href="#" class="pclink">View Campaign <i class="fa-solid fa-arrow-right fa-xs"></i></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+  <div class="si">
+    <div class="smark"><span class="snum">04</span><div class="sline2"></div><span class="slbl">Tools & Platforms</span></div>
+    <h2>My <em>arsenal</em></h2>
+    <p class="ssub">Industry-standard platforms I use to plan, execute, and measure digital marketing campaigns.</p>
+    <div class="tgrid reveal">
+      <div class="tbox"><div class="tico">🔎</div><div class="tn">Search Console</div><div class="tcat">SEO · GSC</div></div>
+      <div class="tbox"><div class="tico">📊</div><div class="tn">Google Analytics 4</div><div class="tcat">Analytics</div></div>
+      <div class="tbox"><div class="tico">⚡</div><div class="tn">PageSpeed Insights</div><div class="tcat">Performance</div></div>
+      <div class="tbox"><div class="tico">📢</div><div class="tn">Google Ads</div><div class="tcat">SEM · PPC</div></div>
+      <div class="tbox"><div class="tico">🧩</div><div class="tn">Meta Ads Manager</div><div class="tcat">SMM</div></div>
+      <div class="tbox"><div class="tico">🔑</div><div class="tn">Ahrefs / Semrush</div><div class="tcat">Keyword Research</div></div>
+      <div class="tbox"><div class="tico">🗺️</div><div class="tn">Google Tag Manager</div><div class="tcat">Tracking</div></div>
+      <div class="tbox"><div class="tico">🕷️</div><div class="tn">Screaming Frog</div><div class="tcat">Technical SEO</div></div>
+      <div class="tbox"><div class="tico">📝</div><div class="tn">Ubersuggest</div><div class="tcat">SEO Research</div></div>
+      <div class="tbox"><div class="tico">🎨</div><div class="tn">Canva</div><div class="tcat">Ad Creatives</div></div>
+      <div class="tbox"><div class="tico">📌</div><div class="tn">WordPress</div><div class="tcat">CMS · SEO</div></div>
+      <div class="tbox"><div class="tico">📈</div><div class="tn">Looker Studio</div><div class="tcat">Reporting</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="si">
+    <div class="smark"><span class="snum">05</span><div class="sline2"></div><span class="slbl">Contact</span></div>
+    <h2>Let's create something <em>great</em></h2>
+    <p class="ssub">Actively seeking opportunities in Digital Marketing. Reach out for roles, freelance projects, or just a conversation.</p>
+    <div class="clayout">
+      <div class="reveal">
+        <div class="citems">
+          <a href="mailto:rehan@email.com" class="citem"><div class="cico"><i class="fa-solid fa-envelope"></i></div><div><div class="clbl">Email</div><div class="cval">rehan@email.com</div></div></a>
+          <a href="tel:+910000000000" class="citem"><div class="cico"><i class="fa-solid fa-phone"></i></div><div><div class="clbl">Phone</div><div class="cval">+91 00000 00000</div></div></a>
+          <a href="https://linkedin.com/in/rehan" target="_blank" class="citem"><div class="cico"><i class="fa-brands fa-linkedin"></i></div><div><div class="clbl">LinkedIn</div><div class="cval">linkedin.com/in/rehan</div></div></a>
+          <a href="#" class="citem"><div class="cico"><i class="fa-solid fa-location-dot"></i></div><div><div class="clbl">Location</div><div class="cval">India · Open to Remote</div></div></a>
+        </div>
+      </div>
+      <div class="reveal d2">
+        <div class="fg"><label class="flbl">Your Name</label><input class="finput" type="text" placeholder="John Smith"/></div>
+        <div class="fg"><label class="flbl">Email Address</label><input class="finput" type="email" placeholder="john@company.com"/></div>
+        <div class="fg"><label class="flbl">Subject</label><input class="finput" type="text" placeholder="Job Opportunity · Project Inquiry"/></div>
+        <div class="fg"><label class="flbl">Message</label><textarea class="finput fta" placeholder="Tell me about the opportunity…"></textarea></div>
+        <button class="bsend">Send Message &nbsp;→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="flogo">Rehan</div>
+  <div class="fnote">Digital Marketing Portfolio · 2025 · GitHub Pages</div>
+  <div class="fls"><a href="#about">About</a><a href="#portfolio">Work</a><a href="#contact">Contact</a></div>
+</footer>
+
+<script>
+function openTab(id,btn){
+  document.querySelectorAll('.tpanel').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.tbtn').forEach(b=>b.classList.remove('on'));
+  document.getElementById('tab-'+id).classList.add('on');
+  btn.classList.add('on');
+}
+window.addEventListener('scroll',()=>{
+  const p=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;
+  document.getElementById('sl').style.height=p+'vh';
+});
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.getElementById('pup').addEventListener('change',function(e){
+  const f=e.target.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=ev=>{document.getElementById('pinner').innerHTML='<img src="'+ev.target.result+'" alt="Rehan"/>';};
+  r.readAsDataURL(f);
+});
+</script>
+</body>
+</html>
