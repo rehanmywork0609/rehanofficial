@@ -1,777 +1,549 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Digital Marketing Specialist & SEO Expert portfolio – ranking websites, driving growth, and crafting winning strategies." />
-  <meta name="keywords" content="SEO Expert, Digital Marketing, SEM, Google Ads, Meta Ads, Social Media Marketing, Keyword Research" />
-  <meta name="author" content="Your Name" />
-  <meta property="og:title" content="Your Name | Digital Marketing & SEO Specialist" />
-  <meta property="og:description" content="Premium portfolio of a fresher Digital Marketing & SEO Specialist." />
-  <meta property="og:type" content="website" />
-  <title>Your Name | Digital Marketing & SEO Specialist</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+<title>Digital Marketing Portfolio | SEO Specialist</title>
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    background:rgba(15,23,42,0.9);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 8%;
+    gap:60px;
+    flex-wrap:wrap;
+    background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+}
+
+.hero-img img{
+    width:350px;
+    border-radius:20px;
+    border:5px solid #38bdf8;
+    box-shadow:0 0 30px #38bdf8;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h1{
+    font-size:60px;
+    line-height:1.2;
+}
+
+.hero-text span{
+    color:#38bdf8;
+}
+
+.hero-text h3{
+    margin-top:15px;
+    font-size:24px;
+    color:#cbd5e1;
+}
+
+.hero-text p{
+    margin-top:20px;
+    line-height:1.8;
+    color:#d1d5db;
+}
+
+.buttons{
+    margin-top:30px;
+}
+
+.buttons a{
+    display:inline-block;
+    padding:14px 30px;
+    margin-right:15px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.btn1{
+    background:#38bdf8;
+    color:black;
+}
+
+.btn2{
+    border:2px solid #38bdf8;
+    color:#38bdf8;
+}
+
+.buttons a:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px #38bdf8;
+}
+
+/* SECTION */
+
+section{
+    padding:100px 8%;
+}
+
+.title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:60px;
+    color:#38bdf8;
+}
+
+/* ABOUT */
+
+.about{
+    text-align:center;
+    line-height:2;
+    color:#d1d5db;
+    font-size:18px;
+}
+
+/* SKILLS */
+
+.skills-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.skill-box{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.skill-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(56,189,248,0.5);
+}
+
+.skill-box h3{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 20px rgba(56,189,248,0.5);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+/* TOOLS */
+
+.tools{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.tool{
+    background:#1e293b;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.tool:hover{
+    transform:translateY(-10px);
+    background:#38bdf8;
+    color:black;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.contact a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+    background:#020617;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+    color:#94a3b8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero{
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:42px;
+    }
+
+    .hero-img img{
+        width:280px;
+    }
+
+}
+
+</style>
 </head>
 <body>
 
-  <!-- ░░ LOADING SCREEN ░░ -->
-  <div id="loader">
-    <div class="loader-inner">
-      <div class="loader-ring"></div>
-      <span class="loader-text">Initializing<span class="dots">...</span></span>
-    </div>
-  </div>
+<!-- NAVBAR -->
 
-  <!-- ░░ SCROLL PROGRESS BAR ░░ -->
-  <div id="scroll-progress"></div>
+<nav>
 
-  <!-- ░░ CURSOR GLOW ░░ -->
-  <div id="cursor-glow"></div>
+<div class="logo">Rehan.</div>
 
-  <!-- ░░ NAVBAR ░░ -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">YN<span class="dot">.</span></a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio-seo">SEO</a></li>
-        <li><a href="#portfolio-sem">SEM</a></li>
-        <li><a href="#social-media">Social</a></li>
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <a href="resume.pdf" download class="nav-cta">Download CV</a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#portfolio-seo">SEO</a>
-      <a href="#portfolio-sem">SEM</a>
-      <a href="#social-media">Social</a>
-      <a href="#tools">Tools</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#seo">SEO</a></li>
+<li><a href="#sem">SEM</a></li>
+<li><a href="#smm">SMM</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-  <!-- ░░ HERO SECTION ░░ -->
-  <section id="hero">
-    <!-- Particle canvas -->
-    <canvas id="particle-canvas"></canvas>
-    <!-- Grid overlay -->
-    <div class="hero-grid-overlay"></div>
+</nav>
 
-    <div class="hero-content">
-      <div class="hero-badge reveal-up">Available for Opportunities</div>
-      <div class="hero-photo-wrap reveal-up delay-1">
-        <div class="photo-ring"></div>
-        <img src="assets/profile.jpg" alt="Your Name – Digital Marketing Specialist" class="hero-photo" onerror="this.src='https://ui-avatars.com/api/?name=YN&background=0a0a0a&color=00f5c4&size=200&bold=true'" />
-      </div>
-      <h1 class="hero-name reveal-up delay-2">Your Name</h1>
-      <p class="hero-typed reveal-up delay-3"><span id="typed-text"></span><span class="cursor-blink">|</span></p>
-      <p class="hero-intro reveal-up delay-4">
-        Transforming search rankings into business growth. I craft data-driven SEO strategies, high-converting ad campaigns, and compelling social media experiences that put brands in front of the right audience.
-      </p>
-      <div class="hero-btns reveal-up delay-5">
-        <a href="resume.pdf" download class="btn-primary"><i class="fa-solid fa-download"></i> Download Resume</a>
-        <a href="#portfolio-seo" class="btn-outline"><i class="fa-solid fa-briefcase"></i> View Portfolio</a>
-        <a href="#contact" class="btn-ghost"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
-      </div>
-      <!-- Animated stats -->
-      <div class="hero-stats reveal-up delay-6">
-        <div class="stat-pill"><span class="counter" data-target="25">0</span>+ Projects</div>
-        <div class="stat-pill"><span class="counter" data-target="15">0</span>+ Tools</div>
-        <div class="stat-pill"><span class="counter" data-target="10">0</span>+ Certifications</div>
-      </div>
-    </div>
+<!-- HERO -->
 
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
+<section class="hero">
 
-  <!-- ░░ ABOUT SECTION ░░ -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-label reveal-up">About Me</div>
-      <h2 class="section-title reveal-up">The Strategist <span class="gradient-text">Behind the Rankings</span></h2>
+<div class="hero-img">
+<img src="your-photo.jpg" alt="Profile Photo">
+</div>
 
-      <div class="about-grid">
-        <!-- Left: Story -->
-        <div class="about-text reveal-left">
-          <p>I'm a recently completed <strong>Digital Marketing student</strong> with a deep passion for SEO, SEM, and Social Media Marketing. My goal is simple: help businesses dominate search results and grow their online presence with strategies that actually work.</p>
-          <p>From mastering <strong>on-page SEO</strong> and <strong>technical audits</strong> to running targeted <strong>Google and Meta ad campaigns</strong>, I combine analytical thinking with creative execution to deliver measurable results.</p>
-          <p>I believe every business deserves to be found by the right people — and I'm here to make that happen.</p>
-          <div class="about-tags">
-            <span>SEO Strategy</span><span>SEM</span><span>Data Analysis</span>
-            <span>Content Marketing</span><span>Google Ads</span><span>Meta Ads</span>
-          </div>
-        </div>
+<div class="hero-text">
 
-        <!-- Right: Timeline -->
-        <div class="timeline reveal-right">
-          <div class="timeline-item">
-            <div class="tl-dot"></div>
-            <div class="tl-content">
-              <span class="tl-year">2024</span>
-              <h4>Digital Marketing Course Completed</h4>
-              <p>Intensive training in SEO, SEM, Social Media & Analytics at a premier digital marketing institute.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="tl-dot"></div>
-            <div class="tl-content">
-              <span class="tl-year">2023</span>
-              <h4>Google Certifications Earned</h4>
-              <p>Completed Google Ads, Google Analytics, and Search Console certifications.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="tl-dot"></div>
-            <div class="tl-content">
-              <span class="tl-year">2022</span>
-              <h4>Bachelor's Degree</h4>
-              <p>Graduated with a degree in Commerce / Business Administration from [Your University].</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="tl-dot"></div>
-            <div class="tl-content">
-              <span class="tl-year">2021</span>
-              <h4>First SEO Project</h4>
-              <p>Optimized a local business website — achieved first-page ranking in 3 months.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<h1>Hi, I'm <span>Rehan</span></h1>
 
-  <!-- ░░ EDUCATION SECTION ░░ -->
-  <section id="education" class="section section-dark">
-    <div class="container">
-      <div class="section-label reveal-up">Education</div>
-      <h2 class="section-title reveal-up">Academic <span class="gradient-text">Foundation</span></h2>
-      <div class="edu-grid">
+<h3>Digital Marketing Specialist | SEO Expert | SEM Strategist</h3>
 
-        <div class="edu-card reveal-up">
-          <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-          <div class="edu-badge">2024</div>
-          <h3>Advanced Digital Marketing</h3>
-          <p class="edu-institute">NIIT / Digital Vidya / [Your Institute]</p>
-          <p>Comprehensive program covering SEO, SEM, Social Media Marketing, Email Marketing, Content Strategy, and Web Analytics.</p>
-          <div class="edu-tags"><span>6 Months</span><span>Certified</span></div>
-        </div>
+<p>
+Recently completed Digital Marketing student passionate about SEO, Google Ads, Meta Ads, and Social Media Marketing. Skilled in website optimization, keyword research, analytics, and creating online growth strategies.
+</p>
 
-        <div class="edu-card reveal-up delay-1">
-          <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
-          <div class="edu-badge">2022</div>
-          <h3>Bachelor of Commerce / BBA</h3>
-          <p class="edu-institute">[Your University]</p>
-          <p>Business fundamentals including marketing, economics, and management — building a strong foundation for digital strategy.</p>
-          <div class="edu-tags"><span>3 Years</span><span>Degree</span></div>
-        </div>
+<div class="buttons">
+<a href="#" class="btn1">Download Resume</a>
+<a href="#contact" class="btn2">Contact Me</a>
+</div>
 
-        <div class="edu-card reveal-up delay-2">
-          <div class="edu-icon"><i class="fa-brands fa-google"></i></div>
-          <div class="edu-badge">2023</div>
-          <h3>Google Digital Garage</h3>
-          <p class="edu-institute">Google</p>
-          <p>Fundamentals of Digital Marketing — 26 modules covering SEO, SEM, analytics, and online business growth.</p>
-          <div class="edu-tags"><span>Certified</span><span>Google</span></div>
-        </div>
+</div>
 
-        <div class="edu-card reveal-up delay-3">
-          <div class="edu-icon"><i class="fa-solid fa-certificate"></i></div>
-          <div class="edu-badge">2023</div>
-          <h3>HubSpot Inbound Marketing</h3>
-          <p class="edu-institute">HubSpot Academy</p>
-          <p>Inbound methodology, content marketing, email marketing automation, and lead nurturing strategies.</p>
-          <div class="edu-tags"><span>Certified</span><span>HubSpot</span></div>
-        </div>
+</section>
 
-      </div>
-    </div>
-  </section>
+<!-- ABOUT -->
 
-  <!-- ░░ SKILLS SECTION ░░ -->
-  <section id="skills" class="section">
-    <div class="container">
-      <div class="section-label reveal-up">Expertise</div>
-      <h2 class="section-title reveal-up">Skills & <span class="gradient-text">Capabilities</span></h2>
+<section id="about">
 
-      <div class="skills-grid">
-        <!-- Skill bars column -->
-        <div class="skill-bars reveal-left">
-          <div class="skill-bar-item">
-            <div class="skill-meta"><span>SEO (On-Page / Off-Page / Technical)</span><span class="skill-pct">90%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
-          </div>
-          <div class="skill-bar-item">
-            <div class="skill-meta"><span>SEM / Google Ads</span><span class="skill-pct">82%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-width="82"></div></div>
-          </div>
-          <div class="skill-bar-item">
-            <div class="skill-meta"><span>Meta Ads (Facebook & Instagram)</span><span class="skill-pct">80%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
-          </div>
-          <div class="skill-bar-item">
-            <div class="skill-meta"><span>Keyword Research</span><span class="skill-pct">88%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-width="88"></div></div>
-          </div>
-          <div class="skill-bar-item">
-            <div class="skill-meta"><span>Content Marketing</span><span class="skill-pct">78%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-width="78"></div></div>
-          </div>
-          <div class="skill-bar-item">
-            <div class="skill-meta"><span>GA4 & Google Search Console</span><span class="skill-pct">85%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
-          </div>
-          <div class="skill-bar-item">
-            <div class="skill-meta"><span>Local SEO</span><span class="skill-pct">83%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-width="83"></div></div>
-          </div>
-          <div class="skill-bar-item">
-            <div class="skill-meta"><span>WordPress & HTML/CSS Basics</span><span class="skill-pct">75%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-width="75"></div></div>
-          </div>
-          <div class="skill-bar-item">
-            <div class="skill-meta"><span>Canva & Graphic Design</span><span class="skill-pct">80%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
-          </div>
-        </div>
+<h2 class="title">About Me</h2>
 
-        <!-- Skill cards grid -->
-        <div class="skill-cards reveal-right">
-          <div class="skill-card"><i class="fa-solid fa-magnifying-glass-chart"></i><span>On-Page SEO</span></div>
-          <div class="skill-card"><i class="fa-solid fa-link"></i><span>Off-Page SEO</span></div>
-          <div class="skill-card"><i class="fa-solid fa-code"></i><span>Technical SEO</span></div>
-          <div class="skill-card"><i class="fa-brands fa-google"></i><span>Google Ads</span></div>
-          <div class="skill-card"><i class="fa-brands fa-meta"></i><span>Meta Ads</span></div>
-          <div class="skill-card"><i class="fa-solid fa-hashtag"></i><span>Social Media</span></div>
-          <div class="skill-card"><i class="fa-solid fa-key"></i><span>Keyword Research</span></div>
-          <div class="skill-card"><i class="fa-solid fa-file-pen"></i><span>Content Strategy</span></div>
-          <div class="skill-card"><i class="fa-solid fa-location-dot"></i><span>Local SEO</span></div>
-          <div class="skill-card"><i class="fa-solid fa-chart-line"></i><span>GA4 Analytics</span></div>
-          <div class="skill-card"><i class="fa-solid fa-gauge-high"></i><span>PageSpeed</span></div>
-          <div class="skill-card"><i class="fa-solid fa-clipboard-check"></i><span>Website Audit</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="about">
 
-  <!-- ░░ SEO PORTFOLIO SECTION ░░ -->
-  <section id="portfolio-seo" class="section section-dark">
-    <div class="container">
-      <div class="section-label reveal-up">Portfolio</div>
-      <h2 class="section-title reveal-up">SEO <span class="gradient-text">Projects</span></h2>
-      <p class="section-sub reveal-up">Real-world optimization work — from technical audits to ranking breakthroughs.</p>
+<p>
+I am a passionate Digital Marketing fresher with hands-on experience in SEO, SEM, and Social Media Marketing through dummy projects and practical learning.
+</p>
 
-      <div class="portfolio-grid">
+<p>
+I have worked on website audits, on-page SEO optimization, technical SEO improvements, keyword research, and Google Ads campaign strategies.
+</p>
 
-        <div class="port-card reveal-up" onclick="openModal('seo1')">
-          <div class="port-img-wrap">
-            <img src="assets/seo-project1.jpg" alt="On-Page SEO project" onerror="this.parentElement.style.background='linear-gradient(135deg,#0a0a0a,#1a1a2e)'" />
-            <div class="port-overlay"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Case Study</div>
-          </div>
-          <div class="port-body">
-            <div class="port-tag">On-Page SEO</div>
-            <h3>E-Commerce On-Page Optimization</h3>
-            <p>Optimized 50+ product pages – meta tags, schema markup, internal linking & content restructuring.</p>
-            <div class="port-stats">
-              <div class="ps"><span class="ps-label">Traffic</span><span class="ps-val green">+140%</span></div>
-              <div class="ps"><span class="ps-label">Rankings</span><span class="ps-val green">Top 5</span></div>
-              <div class="ps"><span class="ps-label">Bounce Rate</span><span class="ps-val red">-32%</span></div>
-            </div>
-          </div>
-        </div>
+<p>
+My goal is to help businesses improve their online visibility and grow through data-driven digital marketing strategies.
+</p>
 
-        <div class="port-card reveal-up delay-1" onclick="openModal('seo2')">
-          <div class="port-img-wrap">
-            <img src="assets/seo-project2.jpg" alt="Technical SEO project" onerror="this.parentElement.style.background='linear-gradient(135deg,#0a1a0a,#0d2d0d)'" />
-            <div class="port-overlay"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Case Study</div>
-          </div>
-          <div class="port-body">
-            <div class="port-tag teal">Technical SEO</div>
-            <h3>Technical SEO Overhaul</h3>
-            <p>Core Web Vitals fix, crawl error resolution, sitemap optimization & structured data implementation.</p>
-            <div class="port-stats">
-              <div class="ps"><span class="ps-label">LCP</span><span class="ps-val green">1.8s</span></div>
-              <div class="ps"><span class="ps-label">CLS</span><span class="ps-val green">0.02</span></div>
-              <div class="ps"><span class="ps-label">Errors Fixed</span><span class="ps-val green">45+</span></div>
-            </div>
-          </div>
-        </div>
+</div>
 
-        <div class="port-card reveal-up delay-2" onclick="openModal('seo3')">
-          <div class="port-img-wrap">
-            <img src="assets/seo-project3.jpg" alt="Keyword research project" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a0a1a,#2d0d2d)'" />
-            <div class="port-overlay"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Case Study</div>
-          </div>
-          <div class="port-body">
-            <div class="port-tag purple">Keyword Research</div>
-            <h3>Keyword Strategy for SaaS Brand</h3>
-            <p>Identified 200+ high-intent keywords, mapped to content clusters, uncovering $50K+ in traffic value.</p>
-            <div class="port-stats">
-              <div class="ps"><span class="ps-label">Keywords</span><span class="ps-val green">200+</span></div>
-              <div class="ps"><span class="ps-label">Traffic Value</span><span class="ps-val green">$50K</span></div>
-              <div class="ps"><span class="ps-label">Clusters</span><span class="ps-val green">12</span></div>
-            </div>
-          </div>
-        </div>
+</section>
 
-        <div class="port-card reveal-up delay-3" onclick="openModal('seo4')">
-          <div class="port-img-wrap">
-            <img src="assets/seo-project4.jpg" alt="Website audit" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1000,#2d2000)'" />
-            <div class="port-overlay"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Case Study</div>
-          </div>
-          <div class="port-body">
-            <div class="port-tag orange">Website Audit</div>
-            <h3>Full SEO Audit – Local Business</h3>
-            <p>Comprehensive 60-point audit covering technical, on-page, off-page, and local SEO factors.</p>
-            <div class="port-stats">
-              <div class="ps"><span class="ps-label">Issues Found</span><span class="ps-val green">60+</span></div>
-              <div class="ps"><span class="ps-label">Score Before</span><span class="ps-val red">42</span></div>
-              <div class="ps"><span class="ps-label">Score After</span><span class="ps-val green">87</span></div>
-            </div>
-          </div>
-        </div>
+<!-- SKILLS -->
 
-        <div class="port-card reveal-up delay-4" onclick="openModal('seo5')">
-          <div class="port-img-wrap">
-            <img src="assets/seo-project5.jpg" alt="Google Search Console" onerror="this.parentElement.style.background='linear-gradient(135deg,#00101a,#001a2d)'" />
-            <div class="port-overlay"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Case Study</div>
-          </div>
-          <div class="port-body">
-            <div class="port-tag blue">GSC Analysis</div>
-            <h3>Search Console Performance Report</h3>
-            <p>Analysed 6 months of GSC data, identified CTR opportunities and indexed 300+ previously missed pages.</p>
-            <div class="port-stats">
-              <div class="ps"><span class="ps-label">CTR Lift</span><span class="ps-val green">+45%</span></div>
-              <div class="ps"><span class="ps-label">Impressions</span><span class="ps-val green">3x</span></div>
-              <div class="ps"><span class="ps-label">Pages Indexed</span><span class="ps-val green">300+</span></div>
-            </div>
-          </div>
-        </div>
+<section id="skills">
 
-        <div class="port-card reveal-up delay-5" onclick="openModal('seo6')">
-          <div class="port-img-wrap">
-            <img src="assets/seo-project6.jpg" alt="PageSpeed optimization" onerror="this.parentElement.style.background='linear-gradient(135deg,#0a1500,#152000)'" />
-            <div class="port-overlay"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Case Study</div>
-          </div>
-          <div class="port-body">
-            <div class="port-tag lime">PageSpeed</div>
-            <h3>Core Web Vitals Optimization</h3>
-            <p>PageSpeed score jumped from 41 to 94 via image optimization, lazy loading, and code minification.</p>
-            <div class="port-stats">
-              <div class="ps"><span class="ps-label">Score Before</span><span class="ps-val red">41</span></div>
-              <div class="ps"><span class="ps-label">Score After</span><span class="ps-val green">94</span></div>
-              <div class="ps"><span class="ps-label">Load Time</span><span class="ps-val green">1.2s</span></div>
-            </div>
-          </div>
-        </div>
+<h2 class="title">My Skills</h2>
 
-      </div>
-    </div>
-  </section>
+<div class="skills-container">
 
-  <!-- ░░ SEM PORTFOLIO SECTION ░░ -->
-  <section id="portfolio-sem" class="section">
-    <div class="container">
-      <div class="section-label reveal-up">SEM</div>
-      <h2 class="section-title reveal-up">Ad Campaign <span class="gradient-text">Showcase</span></h2>
-      <p class="section-sub reveal-up">Data-driven paid advertising campaigns that maximize ROI and minimize wasted spend.</p>
+<div class="skill-box">
+<h3>SEO</h3>
+<p>On-Page SEO, Off-Page SEO, Technical SEO, Keyword Research.</p>
+</div>
 
-      <div class="sem-grid">
+<div class="skill-box">
+<h3>SEM</h3>
+<p>Google Ads, PPC Campaigns, Search Ads, Display Ads.</p>
+</div>
 
-        <div class="sem-card reveal-up">
-          <div class="sem-header">
-            <div class="sem-icon"><i class="fa-brands fa-google"></i></div>
-            <div class="sem-title-wrap">
-              <h3>Search Ad Campaign</h3>
-              <span class="sem-status active">Active</span>
-            </div>
-          </div>
-          <div class="sem-metrics">
-            <div class="metric"><div class="metric-val">4.8%</div><div class="metric-label">CTR</div></div>
-            <div class="metric"><div class="metric-val">₹18</div><div class="metric-label">Avg CPC</div></div>
-            <div class="metric"><div class="metric-val">3.2x</div><div class="metric-label">ROAS</div></div>
-            <div class="metric"><div class="metric-val">92</div><div class="metric-label">Quality Score</div></div>
-          </div>
-          <div class="sem-bar-wrap">
-            <div class="sem-bar-label"><span>Budget Efficiency</span><span>87%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-width="87"></div></div>
-          </div>
-          <p class="sem-desc">Targeted search campaign for a local service business – drove 120+ leads in 30 days with optimized ad copy and negative keyword lists.</p>
-        </div>
+<div class="skill-box">
+<h3>Social Media Marketing</h3>
+<p>Meta Ads, Instagram Marketing, Facebook Marketing.</p>
+</div>
 
-        <div class="sem-card reveal-up delay-1">
-          <div class="sem-header">
-            <div class="sem-icon display"><i class="fa-solid fa-display"></i></div>
-            <div class="sem-title-wrap">
-              <h3>Display Ad Campaign</h3>
-              <span class="sem-status completed">Completed</span>
-            </div>
-          </div>
-          <div class="sem-metrics">
-            <div class="metric"><div class="metric-val">2.1%</div><div class="metric-label">CTR</div></div>
-            <div class="metric"><div class="metric-val">₹8</div><div class="metric-label">Avg CPC</div></div>
-            <div class="metric"><div class="metric-val">85K</div><div class="metric-label">Impressions</div></div>
-            <div class="metric"><div class="metric-val">4.5x</div><div class="metric-label">ROAS</div></div>
-          </div>
-          <div class="sem-bar-wrap">
-            <div class="sem-bar-label"><span>Reach Efficiency</span><span>79%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-width="79"></div></div>
-          </div>
-          <p class="sem-desc">Brand awareness campaign with responsive display ads — A/B tested 6 creatives, reducing CPA by 38% over 2 months.</p>
-        </div>
+<div class="skill-box">
+<h3>Analytics Tools</h3>
+<p>GA4, Google Search Console, PageSpeed Insights.</p>
+</div>
 
-        <div class="sem-card reveal-up delay-2">
-          <div class="sem-header">
-            <div class="sem-icon youtube"><i class="fa-brands fa-youtube"></i></div>
-            <div class="sem-title-wrap">
-              <h3>YouTube Video Ads</h3>
-              <span class="sem-status active">Active</span>
-            </div>
-          </div>
-          <div class="sem-metrics">
-            <div class="metric"><div class="metric-val">28%</div><div class="metric-label">View Rate</div></div>
-            <div class="metric"><div class="metric-val">₹0.35</div><div class="metric-label">CPV</div></div>
-            <div class="metric"><div class="metric-val">50K+</div><div class="metric-label">Views</div></div>
-            <div class="metric"><div class="metric-val">6.2%</div><div class="metric-label">CTR</div></div>
-          </div>
-          <div class="sem-bar-wrap">
-            <div class="sem-bar-label"><span>Engagement Rate</span><span>82%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-width="82"></div></div>
-          </div>
-          <p class="sem-desc">TrueView in-stream video ad campaign for an education brand — achieved 50K+ views with a CPV of just ₹0.35.</p>
-        </div>
+<div class="skill-box">
+<h3>Website Optimization</h3>
+<p>SEO Audits, Performance Optimization, Mobile SEO.</p>
+</div>
 
-        <div class="sem-card reveal-up delay-3">
-          <div class="sem-header">
-            <div class="sem-icon pmax"><i class="fa-solid fa-rocket"></i></div>
-            <div class="sem-title-wrap">
-              <h3>Performance Max</h3>
-              <span class="sem-status active">Active</span>
-            </div>
-          </div>
-          <div class="sem-metrics">
-            <div class="metric"><div class="metric-val">5.1%</div><div class="metric-label">Conv. Rate</div></div>
-            <div class="metric"><div class="metric-val">₹320</div><div class="metric-label">CPA</div></div>
-            <div class="metric"><div class="metric-val">4.8x</div><div class="metric-label">ROAS</div></div>
-            <div class="metric"><div class="metric-val">200+</div><div class="metric-label">Conversions</div></div>
-          </div>
-          <div class="sem-bar-wrap">
-            <div class="sem-bar-label"><span>Optimization Score</span><span>91%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-width="91"></div></div>
-          </div>
-          <p class="sem-desc">PMax campaign across all Google channels — leveraged asset groups and audience signals to scale conversions with 4.8x ROAS.</p>
-        </div>
+<div class="skill-box">
+<h3>Design & CMS</h3>
+<p>Canva, WordPress, HTML & CSS Basics.</p>
+</div>
 
-      </div>
-    </div>
-  </section>
+</div>
 
-  <!-- ░░ SOCIAL MEDIA SECTION ░░ -->
-  <section id="social-media" class="section section-dark">
-    <div class="container">
-      <div class="section-label reveal-up">Social Media</div>
-      <h2 class="section-title reveal-up">Social Media <span class="gradient-text">Marketing</span></h2>
-      <p class="section-sub reveal-up">Scroll-stopping content and performance-driven social ad campaigns.</p>
+</section>
 
-      <div class="social-showcase">
+<!-- SEO PORTFOLIO -->
 
-        <!-- Platform cards -->
-        <div class="platform-cards reveal-left">
-          <div class="platform-card meta">
-            <div class="platform-header">
-              <i class="fa-brands fa-meta"></i>
-              <div>
-                <h4>Meta Ads</h4>
-                <span>Facebook & Instagram</span>
-              </div>
-            </div>
-            <div class="platform-metrics">
-              <div class="pm"><span class="pm-val">₹2.40</span><span class="pm-label">CPR</span></div>
-              <div class="pm"><span class="pm-val">8.2%</span><span class="pm-label">CTR</span></div>
-              <div class="pm"><span class="pm-val">2.8x</span><span class="pm-label">ROAS</span></div>
-            </div>
-            <p>Conversion-focused campaigns with laser-targeted custom and lookalike audiences.</p>
-          </div>
+<section id="seo">
 
-          <div class="platform-card instagram">
-            <div class="platform-header">
-              <i class="fa-brands fa-instagram"></i>
-              <div>
-                <h4>Instagram Growth</h4>
-                <span>Organic Strategy</span>
-              </div>
-            </div>
-            <div class="platform-metrics">
-              <div class="pm"><span class="pm-val">+2.4K</span><span class="pm-label">Followers</span></div>
-              <div class="pm"><span class="pm-val">6.5%</span><span class="pm-label">Eng. Rate</span></div>
-              <div class="pm"><span class="pm-val">18K</span><span class="pm-label">Reach/Week</span></div>
-            </div>
-            <p>Content calendar, Reels strategy, and hashtag research driving organic growth.</p>
-          </div>
+<h2 class="title">SEO Portfolio</h2>
 
-          <div class="platform-card facebook">
-            <div class="platform-header">
-              <i class="fa-brands fa-facebook-f"></i>
-              <div>
-                <h4>Facebook Marketing</h4>
-                <span>Page Management</span>
-              </div>
-            </div>
-            <div class="platform-metrics">
-              <div class="pm"><span class="pm-val">+1.8K</span><span class="pm-label">Page Likes</span></div>
-              <div class="pm"><span class="pm-val">12%</span><span class="pm-label">Reach Growth</span></div>
-              <div class="pm"><span class="pm-val">4.2%</span><span class="pm-label">Eng. Rate</span></div>
-            </div>
-            <p>Community building, boosted posts, and Facebook Group engagement strategies.</p>
-          </div>
-        </div>
+<div class="portfolio">
 
-        <!-- Mock phone / reel display -->
-        <div class="social-mockups reveal-right">
-          <div class="phone-mockup">
-            <div class="phone-screen">
-              <div class="mock-reel">
-                <div class="reel-overlay">
-                  <div class="reel-icon"><i class="fa-brands fa-instagram"></i></div>
-                  <div class="reel-stats"><span><i class="fa-solid fa-heart"></i> 2.4K</span><span><i class="fa-solid fa-comment"></i> 312</span><span><i class="fa-solid fa-share"></i> 148</span></div>
-                  <div class="reel-desc">✨ Content Strategy That Converts</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="social-analytics-card reveal-up delay-2">
-            <div class="sac-header"><i class="fa-solid fa-chart-bar"></i> Engagement Analytics</div>
-            <div class="sac-bars">
-              <div class="sac-bar-row"><span>Mon</span><div class="sac-bar-track"><div class="sac-fill" style="width:70%"></div></div><span>2.4K</span></div>
-              <div class="sac-bar-row"><span>Tue</span><div class="sac-bar-track"><div class="sac-fill" style="width:90%"></div></div><span>3.1K</span></div>
-              <div class="sac-bar-row"><span>Wed</span><div class="sac-bar-track"><div class="sac-fill" style="width:55%"></div></div><span>1.8K</span></div>
-              <div class="sac-bar-row"><span>Thu</span><div class="sac-bar-track"><div class="sac-fill" style="width:80%"></div></div><span>2.7K</span></div>
-              <div class="sac-bar-row"><span>Fri</span><div class="sac-bar-track"><div class="sac-fill" style="width:100%"></div></div><span>3.4K</span></div>
-            </div>
-          </div>
-        </div>
+<div class="card">
+<img src="seo1.jpg" alt="">
+<div class="card-content">
+<h3>On-Page SEO Optimization</h3>
+<p>Optimized titles, meta descriptions, keywords, headings, and internal linking for a dummy website.</p>
+</div>
+</div>
 
-      </div>
-    </div>
-  </section>
+<div class="card">
+<img src="seo2.jpg" alt="">
+<div class="card-content">
+<h3>Technical SEO Audit</h3>
+<p>Improved PageSpeed score, mobile responsiveness, and SEO structure.</p>
+</div>
+</div>
 
-  <!-- ░░ TOOLS SECTION ░░ -->
-  <section id="tools" class="section">
-    <div class="container">
-      <div class="section-label reveal-up">Arsenal</div>
-      <h2 class="section-title reveal-up">Tools & <span class="gradient-text">Software</span></h2>
-      <div class="tools-grid">
-        <div class="tool-card reveal-up"><i class="fa-brands fa-google" style="color:#4285F4"></i><span>GA4 Analytics</span></div>
-        <div class="tool-card reveal-up delay-1"><i class="fa-solid fa-magnifying-glass-chart" style="color:#34A853"></i><span>Search Console</span></div>
-        <div class="tool-card reveal-up delay-2"><i class="fa-brands fa-google" style="color:#FBBC05"></i><span>Google Ads</span></div>
-        <div class="tool-card reveal-up delay-3"><i class="fa-brands fa-meta" style="color:#0668E1"></i><span>Meta Ads Manager</span></div>
-        <div class="tool-card reveal-up delay-4"><i class="fa-solid fa-gauge-high" style="color:#EA4335"></i><span>PageSpeed Insights</span></div>
-        <div class="tool-card reveal-up delay-5"><i class="fa-solid fa-chart-column" style="color:#FF6F2B"></i><span>SEMrush</span></div>
-        <div class="tool-card reveal-up"><i class="fa-solid fa-spider" style="color:#00C6CF"></i><span>Ahrefs</span></div>
-        <div class="tool-card reveal-up delay-1"><i class="fa-brands fa-figma" style="color:#F24E1E"></i><span>Canva</span></div>
-        <div class="tool-card reveal-up delay-2"><i class="fa-brands fa-wordpress" style="color:#21759B"></i><span>WordPress</span></div>
-        <div class="tool-card reveal-up delay-3"><i class="fa-brands fa-html5" style="color:#E44D26"></i><span>HTML & CSS</span></div>
-        <div class="tool-card reveal-up delay-4"><i class="fa-solid fa-envelope" style="color:#00f5c4"></i><span>Mailchimp</span></div>
-        <div class="tool-card reveal-up delay-5"><i class="fa-solid fa-chart-pie" style="color:#aa63f7"></i><span>Google Data Studio</span></div>
-      </div>
-    </div>
-  </section>
+<div class="card">
+<img src="seo3.jpg" alt="">
+<div class="card-content">
+<h3>Google Search Console Report</h3>
+<p>Worked on indexing, keyword tracking, and performance monitoring.</p>
+</div>
+</div>
 
-  <!-- ░░ TESTIMONIALS SECTION ░░ -->
-  <section id="testimonials" class="section section-dark">
-    <div class="container">
-      <div class="section-label reveal-up">Testimonials</div>
-      <h2 class="section-title reveal-up">What <span class="gradient-text">Clients Say</span></h2>
-      <div class="testimonial-grid">
+</div>
 
-        <div class="testi-card reveal-up">
-          <div class="testi-stars">★★★★★</div>
-          <p>"The SEO work on our website was incredible. We went from page 5 to page 1 in just 2 months. Our organic traffic doubled and enquiries are through the roof!"</p>
-          <div class="testi-author">
-            <div class="testi-avatar">RK</div>
-            <div><strong>Rajesh Kumar</strong><br><small>Owner, Krishnamurthy Electronics, Bengaluru</small></div>
-          </div>
-        </div>
+</section>
 
-        <div class="testi-card reveal-up delay-1">
-          <div class="testi-stars">★★★★★</div>
-          <p>"Our Google Ads campaigns were bleeding money before. After the PPC audit and restructuring, our cost-per-lead dropped by 40% and conversions jumped. Highly recommend!"</p>
-          <div class="testi-author">
-            <div class="testi-avatar">PS</div>
-            <div><strong>Priya Sharma</strong><br><small>Founder, FitNest Studio, Pune</small></div>
-          </div>
-        </div>
+<!-- SEM -->
 
-        <div class="testi-card reveal-up delay-2">
-          <div class="testi-stars">★★★★★</div>
-          <p>"The Instagram strategy transformed our brand presence. Content quality, Reels, and hashtag research brought us 2000+ new followers in 60 days. Excellent work!"</p>
-          <div class="testi-author">
-            <div class="testi-avatar">AM</div>
-            <div><strong>Ananya Mehta</strong><br><small>CEO, CloudBake Bakery, Hyderabad</small></div>
-          </div>
-        </div>
+<section id="sem">
 
-      </div>
-    </div>
-  </section>
+<h2 class="title">SEM Portfolio</h2>
 
-  <!-- ░░ RESUME SECTION ░░ -->
-  <section id="resume" class="section">
-    <div class="container">
-      <div class="section-label reveal-up">Resume</div>
-      <h2 class="section-title reveal-up">My Professional <span class="gradient-text">Profile</span></h2>
-      <div class="resume-box reveal-up">
-        <div class="resume-summary">
-          <div class="resume-col">
-            <h4><i class="fa-solid fa-briefcase"></i> Experience</h4>
-            <ul>
-              <li><strong>SEO Intern</strong> – [Agency Name] (3 Months)<br>On-page optimization, keyword research, GSC monitoring</li>
-              <li><strong>Freelance Digital Marketer</strong> – Self-employed<br>SEO, Google Ads & Social Media for 5+ local businesses</li>
-            </ul>
-          </div>
-          <div class="resume-col">
-            <h4><i class="fa-solid fa-certificate"></i> Certifications</h4>
-            <ul>
-              <li>Google Ads Search Certification</li>
-              <li>Google Analytics (GA4) Certification</li>
-              <li>HubSpot Inbound Marketing</li>
-              <li>Meta Blueprint (Facebook Ads)</li>
-              <li>SEMrush SEO Certification</li>
-            </ul>
-          </div>
-        </div>
-        <a href="resume.pdf" download class="btn-primary resume-btn"><i class="fa-solid fa-download"></i> Download Full Resume (PDF)</a>
-      </div>
-    </div>
-  </section>
+<div class="portfolio">
 
-  <!-- ░░ CONTACT SECTION ░░ -->
-  <section id="contact" class="section section-dark">
-    <div class="container">
-      <div class="section-label reveal-up">Get In Touch</div>
-      <h2 class="section-title reveal-up">Let's <span class="gradient-text">Collaborate</span></h2>
-      <p class="section-sub reveal-up">Ready to grow your business online? Let's talk strategy.</p>
+<div class="card">
+<img src="ads1.jpg" alt="">
+<div class="card-content">
+<h3>Google Ads Campaign</h3>
+<p>Created search campaigns with keyword targeting and CTR optimization.</p>
+</div>
+</div>
 
-      <div class="contact-grid">
-        <!-- Info -->
-        <div class="contact-info reveal-left">
-          <div class="contact-detail">
-            <div class="cd-icon"><i class="fa-solid fa-envelope"></i></div>
-            <div><span>Email</span><a href="mailto:yourname@email.com">yourname@email.com</a></div>
-          </div>
-          <div class="contact-detail">
-            <div class="cd-icon"><i class="fa-solid fa-phone"></i></div>
-            <div><span>Phone</span><a href="tel:+919876543210">+91 98765 43210</a></div>
-          </div>
-          <div class="contact-detail">
-            <div class="cd-icon"><i class="fa-brands fa-linkedin"></i></div>
-            <div><span>LinkedIn</span><a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></div>
-          </div>
-          <div class="contact-detail">
-            <div class="cd-icon"><i class="fa-brands fa-github"></i></div>
-            <div><span>GitHub</span><a href="https://github.com/yourprofile" target="_blank">github.com/yourprofile</a></div>
-          </div>
-          <div class="contact-detail">
-            <div class="cd-icon"><i class="fa-brands fa-instagram"></i></div>
-            <div><span>Instagram</span><a href="https://instagram.com/yourprofile" target="_blank">@yourhandle</a></div>
-          </div>
+<div class="card">
+<img src="ads2.jpg" alt="">
+<div class="card-content">
+<h3>PPC Strategy</h3>
+<p>Planned ad groups, bidding strategy, and audience targeting.</p>
+</div>
+</div>
 
-          <!-- Floating social icons -->
-          <div class="floating-socials">
-            <a href="https://linkedin.com" target="_blank" class="fsoc linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://github.com" target="_blank" class="fsoc github" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://instagram.com" target="_blank" class="fsoc instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://twitter.com" target="_blank" class="fsoc twitter" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-          </div>
-        </div>
+</div>
 
-        <!-- Form -->
-        <form class="contact-form reveal-right" id="contact-form" novalidate>
-          <div class="form-group">
-            <input type="text" id="cf-name" placeholder="Your Name" required />
-            <label for="cf-name">Your Name</label>
-          </div>
-          <div class="form-group">
-            <input type="email" id="cf-email" placeholder="Your Email" required />
-            <label for="cf-email">Your Email</label>
-          </div>
-          <div class="form-group">
-            <input type="text" id="cf-subject" placeholder="Subject" />
-            <label for="cf-subject">Subject</label>
-          </div>
-          <div class="form-group">
-            <textarea id="cf-message" rows="5" placeholder="Your Message" required></textarea>
-            <label for="cf-message">Your Message</label>
-          </div>
-          <button type="submit" class="btn-send" id="send-btn">
-            <span class="send-text">Send Message</span>
-            <i class="fa-solid fa-paper-plane"></i>
-          </button>
-          <p class="form-note" id="form-note"></p>
-        </form>
-      </div>
-    </div>
-  </section>
+</section>
 
-  <!-- ░░ FOOTER ░░ -->
-  <footer id="footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <span class="nav-logo">YN<span class="dot">.</span></span>
-        <p>Digital Marketing Specialist | SEO Expert | SEM Strategist</p>
-      </div>
-      <div class="footer-links">
-        <h5>Quick Links</h5>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio-seo">SEO Portfolio</a>
-        <a href="#portfolio-sem">SEM Portfolio</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="footer-socials">
-        <h5>Connect</h5>
-        <div class="footer-icons">
-          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2024 Your Name. All rights reserved. &nbsp;|&nbsp; Built with <span class="heart">♥</span> using HTML, CSS & JavaScript</p>
-    </div>
-  </footer>
+<!-- SMM -->
 
-  <!-- ░░ CASE STUDY MODAL ░░ -->
-  <div id="case-modal" class="modal-overlay" onclick="closeModal(event)">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeModal()">×</button>
-      <div id="modal-content"></div>
-    </div>
-  </div>
+<section id="smm">
 
-  <script src="script.js"></script>
+<h2 class="title">Social Media Marketing</h2>
+
+<div class="portfolio">
+
+<div class="card">
+<img src="social1.jpg" alt="">
+<div class="card-content">
+<h3>Instagram Marketing</h3>
+<p>Created engaging social media posts and content strategy.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="social2.jpg" alt="">
+<div class="card-content">
+<h3>Meta Ads Campaign</h3>
+<p>Designed Meta ad creatives and audience targeting strategy.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- TOOLS -->
+
+<section>
+
+<h2 class="title">Tools I Use</h2>
+
+<div class="tools">
+
+<div class="tool">Google Analytics GA4</div>
+<div class="tool">Google Search Console</div>
+<div class="tool">Google Ads</div>
+<div class="tool">Meta Ads</div>
+<div class="tool">PageSpeed Insights</div>
+<div class="tool">Canva</div>
+<div class="tool">WordPress</div>
+<div class="tool">GitHub Pages</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="title">Contact Me</h2>
+
+<div class="contact">
+
+<p>Email: <a href="#">yourmail@gmail.com</a></p>
+
+<p>Phone: +91 XXXXXXXXXX</p>
+
+<p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+
+<p>GitHub: <a href="#">github.com/yourprofile</a></p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 Rehan | Digital Marketing Portfolio Website</p>
+
+</footer>
+
 </body>
 </html>
