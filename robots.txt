@@ -1,0 +1,12 @@
+# robots.txt — Vidyashree International School
+# This file tells search engine crawlers which pages to index
+
+User-agent: *
+Allow: /
+
+# Block admin or private directories (add yours here)
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location — submit this URL to Google Search Console
+Sitemap: https://www.vidyashree.edu.in/sitemap.xml
