@@ -222,7 +222,23 @@ section{
     gap:15px;
     flex-wrap:wrap;
 }
+/* PROJECT BUTTON FIX */
 
+.project-links a{
+    display:inline-block;
+    padding:12px 20px;
+    background:#38bdf8;
+    color:#ffffff;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.project-links a:hover{
+    background:#0ea5e9;
+    transform:translateY(-3px);
+}
 /* CONTACT */
 
 #contact{
