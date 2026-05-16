@@ -1,0 +1,28 @@
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#00bcd4;
+}
+
+.hire-btn{
+    background:#00bcd4;
+    color:white !important;
+    padding:10px 20px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.hire-btn:hover{
+    background:#0097a7;
+}
