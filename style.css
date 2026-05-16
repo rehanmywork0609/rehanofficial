@@ -16,9 +16,23 @@ html{
 }
 
 body{
-    background:#0f172a;
-    color:#fff;
+    background:#111827;
+    color:#ffffff;
     line-height:1.7;
+}
+
+/* GLOBAL TEXT */
+
+p,
+li,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color:#ffffff;
 }
 
 /* NAVBAR */
@@ -29,7 +43,7 @@ header{
     top:0;
     left:0;
     z-index:1000;
-    background:rgba(15,23,42,0.95);
+    background:rgba(17,24,39,0.95);
     backdrop-filter:blur(10px);
     padding:18px 8%;
 }
@@ -54,7 +68,7 @@ nav ul{
 
 nav ul li a{
     text-decoration:none;
-    color:#fff;
+    color:#ffffff;
     font-weight:500;
     transition:0.3s;
 }
@@ -94,7 +108,7 @@ nav ul li a:hover{
     max-width:700px;
     margin:auto;
     margin-bottom:30px;
-    color:#cbd5e1;
+    color:#e2e8f0;
 }
 
 /* BUTTON */
@@ -104,7 +118,7 @@ nav ul li a:hover{
     padding:14px 32px;
     border-radius:50px;
     background:#38bdf8;
-    color:#fff;
+    color:#ffffff;
     text-decoration:none;
     font-weight:600;
     transition:0.3s;
@@ -120,6 +134,7 @@ nav ul li a:hover{
 
 section{
     padding:100px 10%;
+    background:#111827;
 }
 
 .title{
@@ -139,7 +154,7 @@ section{
 
 .about p{
     font-size:18px;
-    color:#cbd5e1;
+    color:#e2e8f0;
 }
 
 /* SKILLS */
@@ -152,6 +167,7 @@ section{
 
 .skill-box{
     background:#1e293b;
+    color:#ffffff;
     padding:35px;
     border-radius:20px;
     transition:0.4s;
@@ -183,6 +199,7 @@ section{
 
 .card{
     background:#1e293b;
+    color:#ffffff;
     border-radius:20px;
     overflow:hidden;
     transition:0.4s;
@@ -224,13 +241,15 @@ section{
 /* CONTACT */
 
 #contact{
+    background:#111827;
+    color:#ffffff;
     text-align:center;
 }
 
 .contact-info p{
     margin:15px 0;
     font-size:18px;
-    color:#cbd5e1;
+    color:#e2e8f0;
 }
 
 .contact-info a{
@@ -272,5 +291,9 @@ footer{
 
     .title{
         font-size:32px;
+    }
+
+    section{
+        padding:80px 6%;
     }
 }
