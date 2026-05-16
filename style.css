@@ -279,3 +279,27 @@ footer{
         justify-content:center;
     }
 }
+.btn{
+    display:inline-block;
+    padding:10px 20px;
+    background:#00bfff;
+    color:#000 !important;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#009acd;
+    color:#fff !important;
+}
+.project-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:15px;
+}
+.project-links .btn{
+    color:#000 !important;
+}
