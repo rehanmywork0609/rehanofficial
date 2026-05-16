@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Digital Marketing Portfolio | SEO Specialist</title>
+<title>Rehan | Digital Marketing Portfolio</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-/* GOOGLE FONT */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *{
     margin:0;
@@ -36,12 +37,12 @@ nav{
     position:fixed;
     top:0;
     z-index:1000;
-    background:rgba(15,23,42,0.9);
+    background:rgba(15,23,42,0.95);
     backdrop-filter:blur(10px);
 }
 
 .logo{
-    font-size:28px;
+    font-size:30px;
     font-weight:700;
     color:#38bdf8;
 }
@@ -56,6 +57,7 @@ nav ul li a{
     text-decoration:none;
     color:white;
     transition:0.3s;
+    font-weight:500;
 }
 
 nav ul li a:hover{
@@ -69,8 +71,8 @@ nav ul li a:hover{
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:120px 8%;
     gap:60px;
+    padding:140px 8% 80px;
     flex-wrap:wrap;
     background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
 }
@@ -79,7 +81,20 @@ nav ul li a:hover{
     width:350px;
     border-radius:20px;
     border:5px solid #38bdf8;
-    box-shadow:0 0 30px #38bdf8;
+    box-shadow:0 0 30px rgba(56,189,248,0.7);
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
 }
 
 .hero-text{
@@ -97,8 +112,8 @@ nav ul li a:hover{
 
 .hero-text h3{
     margin-top:15px;
-    font-size:24px;
     color:#cbd5e1;
+    font-size:24px;
 }
 
 .hero-text p{
@@ -108,15 +123,15 @@ nav ul li a:hover{
 }
 
 .buttons{
-    margin-top:30px;
+    margin-top:35px;
 }
 
 .buttons a{
     display:inline-block;
     padding:14px 30px;
-    margin-right:15px;
     border-radius:50px;
     text-decoration:none;
+    margin-right:15px;
     font-weight:600;
     transition:0.4s;
 }
@@ -144,7 +159,7 @@ section{
 
 .title{
     text-align:center;
-    font-size:40px;
+    font-size:42px;
     margin-bottom:60px;
     color:#38bdf8;
 }
@@ -154,8 +169,10 @@ section{
 .about{
     text-align:center;
     line-height:2;
-    color:#d1d5db;
     font-size:18px;
+    color:#d1d5db;
+    max-width:1000px;
+    margin:auto;
 }
 
 /* SKILLS */
@@ -176,7 +193,7 @@ section{
 
 .skill-box:hover{
     transform:translateY(-10px);
-    box-shadow:0 0 20px rgba(56,189,248,0.5);
+    box-shadow:0 0 20px rgba(56,189,248,0.4);
 }
 
 .skill-box h3{
@@ -188,8 +205,8 @@ section{
 
 .portfolio{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
-    gap:15px;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
 }
 
 .card{
@@ -197,16 +214,17 @@ section{
     border-radius:20px;
     overflow:hidden;
     transition:0.4s;
+    border:1px solid rgba(255,255,255,0.1);
 }
 
 .card:hover{
-    transform:scale(1.03);
+    transform:translateY(-10px);
     box-shadow:0 0 20px rgba(56,189,248,0.5);
 }
 
 .card img{
-    width:80%;
-    height:40px;
+    width:100%;
+    height:220px;
     object-fit:cover;
 }
 
@@ -215,8 +233,33 @@ section{
 }
 
 .card-content h3{
-    color:#38bdf8;
     margin-bottom:15px;
+    color:#38bdf8;
+}
+
+.card-content p{
+    line-height:1.7;
+    color:#d1d5db;
+}
+
+.project-links{
+    margin-top:20px;
+}
+
+.project-links a{
+    display:inline-block;
+    margin:8px 8px 0 0;
+    padding:10px 18px;
+    border-radius:30px;
+    border:2px solid #38bdf8;
+    text-decoration:none;
+    color:#38bdf8;
+    transition:0.3s;
+}
+
+.project-links a:hover{
+    background:#38bdf8;
+    color:black;
 }
 
 /* TOOLS */
@@ -230,9 +273,10 @@ section{
 .tool{
     background:#1e293b;
     padding:30px;
-    text-align:center;
     border-radius:15px;
+    text-align:center;
     transition:0.4s;
+    font-weight:500;
 }
 
 .tool:hover{
@@ -263,7 +307,6 @@ footer{
     background:#020617;
     text-align:center;
     padding:25px;
-    margin-top:50px;
     color:#94a3b8;
 }
 
@@ -274,6 +317,11 @@ footer{
     nav{
         flex-direction:column;
         gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
     }
 
     .hero{
@@ -303,7 +351,7 @@ footer{
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
-<li><a href="#Projects">Projects</a></li>
+<li><a href="#projects">Projects</a></li>
 <li><a href="#sem">SEM</a></li>
 <li><a href="#smm">SMM</a></li>
 <li><a href="#contact">Contact</a></li>
@@ -316,22 +364,31 @@ footer{
 <section class="hero">
 
 <div class="hero-img">
-<img src="https://i.postimg.cc/nzNxft2F/Chat-GPT-Image-May-16-2026-09-38-14-AM.png" alt="Profile Photo">
+<img src="https://i.postimg.cc/nzNxft2F/Chat-GPT-Image-May-16-2026-09-38-14-AM.png" alt="Rehan Profile">
 </div>
 
 <div class="hero-text">
 
 <h1>Hi, I'm <span>Rehan</span></h1>
 
-<h3>Digital Marketing Specialist | SEO Expert | SEM Strategist</h3>
+<h3>Digital Marketing Specialist | SEO Expert</h3>
 
 <p>
-Recently completed Digital Marketing student passionate about SEO, Google Ads, Meta Ads, and Social Media Marketing. Skilled in website optimization, keyword research, analytics, and creating online growth strategies.
+Passionate Digital Marketing fresher skilled in SEO, Google Ads,
+Meta Ads, Social Media Marketing, Website Optimization,
+and Analytics tools.
 </p>
 
 <div class="buttons">
-<a href="#" class="btn1">Download Resume</a>
-<a href="#contact" class="btn2">Contact Me</a>
+
+<a href="resume.pdf" download class="btn1">
+Download Resume
+</a>
+
+<a href="#contact" class="btn2">
+Contact Me
+</a>
+
 </div>
 
 </div>
@@ -347,15 +404,23 @@ Recently completed Digital Marketing student passionate about SEO, Google Ads, M
 <div class="about">
 
 <p>
-I am a passionate Digital Marketing fresher with hands-on experience in SEO, SEM, and Social Media Marketing through dummy projects and practical learning.
+I am a passionate Digital Marketing fresher with practical knowledge
+in SEO, SEM, and Social Media Marketing.
 </p>
 
-<p>
-I have worked on website audits, on-page SEO optimization, technical SEO improvements, keyword research, and Google Ads campaign strategies.
-</p>
+<br>
 
 <p>
-My goal is to help businesses improve their online visibility and grow through data-driven digital marketing strategies.
+I have worked on dummy projects including website audits,
+Google Ads campaigns, Meta Ads strategy,
+technical SEO optimization, and keyword research.
+</p>
+
+<br>
+
+<p>
+My goal is to help businesses improve online visibility
+through data-driven digital marketing strategies.
 </p>
 
 </div>
@@ -372,69 +437,131 @@ My goal is to help businesses improve their online visibility and grow through d
 
 <div class="skill-box">
 <h3>SEO</h3>
-<p>On-Page SEO, Off-Page SEO, Technical SEO, Keyword Research.</p>
+<p>
+On-Page SEO, Off-Page SEO,
+Technical SEO, Keyword Research.
+</p>
 </div>
 
 <div class="skill-box">
 <h3>SEM</h3>
-<p>Google Ads, PPC Campaigns, Search Ads, Display Ads.</p>
+<p>
+Google Ads, PPC Campaigns,
+Search Ads, Display Ads.
+</p>
 </div>
 
 <div class="skill-box">
 <h3>Social Media Marketing</h3>
-<p>Meta Ads, Instagram Marketing, Facebook Marketing.</p>
+<p>
+Instagram Marketing,
+Facebook Marketing,
+Meta Ads Campaigns.
+</p>
 </div>
 
 <div class="skill-box">
 <h3>Analytics Tools</h3>
-<p>GA4, Google Search Console, PageSpeed Insights.</p>
+<p>
+Google Analytics GA4,
+Search Console,
+PageSpeed Insights.
+</p>
 </div>
 
 <div class="skill-box">
 <h3>Website Optimization</h3>
-<p>SEO Audits, Performance Optimization, Mobile SEO.</p>
+<p>
+SEO Audits,
+Performance Optimization,
+Mobile SEO.
+</p>
 </div>
 
 <div class="skill-box">
 <h3>Design & CMS</h3>
-<p>Canva, WordPress, HTML & CSS Basics.</p>
+<p>
+Canva,
+WordPress,
+HTML & CSS Basics.
+</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- Projects -->
-<section id="Projects">
-<h2 class="title">Project</h2>
-<div class="Project">
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="portfolio">
+
 <div class="card">
-<img src="https://designanddevelop.com/wp-content/uploads/2017/08/top-10-plugins-blog.png" alt="wordpress">
+
+<img src="https://designanddevelop.com/wp-content/uploads/2017/08/top-10-plugins-blog.png" alt="WordPress Project">
+
 <div class="card-content">
-<div class="Projects-section">
-    <h2>WordPress</h2>
-    <a href="wordpress.pdf" target="_blank">
-        View WordPress
-    </a>
-    <h2>Audit Report Excel File</h2>
-    <a href="auditreport.xls" target="_blank">
-        View Audit Report
-    </a>
+
+<h3>WordPress Website</h3>
+
+<p>
+Created and optimized a WordPress website
+with SEO-friendly structure and mobile responsiveness.
+</p>
+
+<div class="project-links">
+
+<a href="wordpress.pdf" target="_blank">
+View WordPress
+</a>
+
+<a href="auditreport.xls" target="_blank">
+Audit Report
+</a>
+
 </div>
-<div class="card">
-<img src="seo2.jpg" alt="">
-<div class="card-content">
-<h3>Technical SEO Audit</h3>
-<p>Improved PageSpeed score, mobile responsiveness, and SEO structure.</p>
+
 </div>
+
 </div>
 
 <div class="card">
-<img src="seo3.jpg" alt="">
+
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" alt="SEO Audit">
+
 <div class="card-content">
-<h3>Google Search Console Report</h3>
-<p>Worked on indexing, keyword tracking, and performance monitoring.</p>
+
+<h3>Technical SEO Audit</h3>
+
+<p>
+Improved website speed,
+mobile responsiveness,
+and SEO structure using technical SEO practices.
+</p>
+
 </div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop" alt="Google Search Console">
+
+<div class="card-content">
+
+<h3>Search Console Report</h3>
+
+<p>
+Worked on indexing,
+keyword tracking,
+and website performance monitoring.
+</p>
+
+</div>
+
 </div>
 
 </div>
@@ -450,19 +577,38 @@ My goal is to help businesses improve their online visibility and grow through d
 <div class="portfolio">
 
 <div class="card">
-<img src="ads1.jpg" alt="">
+
+<img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=1200&auto=format&fit=crop" alt="Google Ads">
+
 <div class="card-content">
+
 <h3>Google Ads Campaign</h3>
-<p>Created search campaigns with keyword targeting and CTR optimization.</p>
+
+<p>
+Created search campaigns with keyword targeting,
+CTR optimization, and audience research.
+</p>
+
 </div>
+
 </div>
 
 <div class="card">
-<img src="ads2.jpg" alt="">
+
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="PPC Strategy">
+
 <div class="card-content">
+
 <h3>PPC Strategy</h3>
-<p>Planned ad groups, bidding strategy, and audience targeting.</p>
+
+<p>
+Planned ad groups,
+bidding strategy,
+and audience targeting.
+</p>
+
 </div>
+
 </div>
 
 </div>
@@ -478,19 +624,37 @@ My goal is to help businesses improve their online visibility and grow through d
 <div class="portfolio">
 
 <div class="card">
-<img src="social1.jpg" alt="">
+
+<img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?q=80&w=1200&auto=format&fit=crop" alt="Instagram Marketing">
+
 <div class="card-content">
+
 <h3>Instagram Marketing</h3>
-<p>Created engaging social media posts and content strategy.</p>
+
+<p>
+Created engaging social media content
+and content marketing strategy.
+</p>
+
 </div>
+
 </div>
 
 <div class="card">
-<img src="social2.jpg" alt="">
+
+<img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?q=80&w=1200&auto=format&fit=crop" alt="Meta Ads">
+
 <div class="card-content">
+
 <h3>Meta Ads Campaign</h3>
-<p>Designed Meta ad creatives and audience targeting strategy.</p>
+
+<p>
+Designed Meta ad creatives
+and audience targeting strategy.
+</p>
+
 </div>
+
 </div>
 
 </div>
@@ -526,13 +690,30 @@ My goal is to help businesses improve their online visibility and grow through d
 
 <div class="contact">
 
-<p>Email: <a href="#">yourmail@gmail.com</a></p>
+<p>
+Email:
+<a href="mailto:yourmail@gmail.com">
+yourmail@gmail.com
+</a>
+</p>
 
-<p>Phone: +91 XXXXXXXXXX</p>
+<p>
+Phone: +91 8197451760
+</p>
 
-<p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+<p>
+LinkedIn:
+<a href="https://linkedin.com" target="_blank">
+linkedin.com/in/yourprofile
+</a>
+</p>
 
-<p>GitHub: <a href="#">github.com/yourprofile</a></p>
+<p>
+GitHub:
+<a href="https://github.com" target="_blank">
+github.com/yourprofile
+</a>
+</p>
 
 </div>
 
@@ -542,7 +723,9 @@ My goal is to help businesses improve their online visibility and grow through d
 
 <footer>
 
-<p>© 2026 Rehan | Digital Marketing Portfolio Website</p>
+<p>
+© 2026 Rehan | Digital Marketing Portfolio Website
+</p>
 
 </footer>
 
