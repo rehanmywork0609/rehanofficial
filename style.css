@@ -520,16 +520,38 @@ transform:translateY(-2px);
 }
 .hire-btn{
 display:inline-block;
-padding:12px 24px;
-background:#007bff;
+padding:14px 32px;
+background:linear-gradient(135deg,#2196f3,#0d47a1);
 color:#fff;
 text-decoration:none;
-border-radius:8px;
-font-weight:600;
-transition:0.3s;
+font-size:16px;
+font-weight:700;
+letter-spacing:0.5px;
+border-radius:50px;
+box-shadow:0 8px 20px rgba(33,150,243,0.35);
+transition:all 0.3s ease;
+position:relative;
+overflow:hidden;
 }
 
 .hire-btn:hover{
-background:#0056cc;
-transform:translateY(-2px);
+transform:translateY(-4px) scale(1.03);
+box-shadow:0 12px 25px rgba(33,150,243,0.45);
+background:linear-gradient(135deg,#42a5f5,#1565c0);
+}
+
+.hire-btn::before{
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.25);
+transform:skewX(-25deg);
+transition:0.5s;
+}
+
+.hire-btn:hover::before{
+left:120%;
 }
