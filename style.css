@@ -518,3 +518,18 @@ transition:0.3s;
 background:#e68900;
 transform:translateY(-2px);
 }
+.hire-btn{
+display:inline-block;
+padding:12px 24px;
+background:#007bff;
+color:#fff;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+transition:0.3s;
+}
+
+.hire-btn:hover{
+background:#0056cc;
+transform:translateY(-2px);
+}
