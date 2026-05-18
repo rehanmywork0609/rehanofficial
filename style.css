@@ -303,16 +303,19 @@ footer{
 .project-links .btn{
     color:#000 !important;
 }
-/* =========================
-   MOBILE RESPONSIVE DESIGN
-========================= */
+/* =========================================
+   COMPLETE MOBILE RESPONSIVE CSS
+========================================= */
 
-@media (max-width: 768px) {
+@media (max-width:768px){
 
-    /* General Layout */
+    /* =========================
+       BODY
+    ========================= */
+
     body{
-        padding:0;
         margin:0;
+        padding:0;
         overflow-x:hidden;
     }
 
@@ -320,7 +323,10 @@ footer{
         padding:40px 20px;
     }
 
-    /* Navigation */
+    /* =========================
+       NAVBAR
+    ========================= */
+
     nav{
         padding:15px 20px;
     }
@@ -331,6 +337,7 @@ footer{
         align-items:center;
         gap:15px;
         padding:0;
+        margin:0;
     }
 
     nav ul li{
@@ -341,7 +348,23 @@ footer{
         font-size:16px;
     }
 
-    /* Hero Section */
+    /* =========================
+       PROFILE IMAGE
+    ========================= */
+
+    .profile img{
+        width:180px;
+        height:180px;
+        object-fit:cover;
+        border-radius:50%;
+        display:block;
+        margin:auto;
+    }
+
+    /* =========================
+       HERO SECTION
+    ========================= */
+
     .hero{
         text-align:center;
         padding:60px 20px;
@@ -354,16 +377,23 @@ footer{
 
     .hero p{
         font-size:16px;
+        line-height:1.7;
     }
 
-    /* Portfolio Grid */
+    /* =========================
+       PORTFOLIO GRID
+    ========================= */
+
     .portfolio{
         display:grid;
         grid-template-columns:1fr;
         gap:20px;
     }
 
-    /* Portfolio Cards */
+    /* =========================
+       PORTFOLIO CARDS
+    ========================= */
+
     .card{
         width:100%;
     }
@@ -371,7 +401,7 @@ footer{
     .card img{
         width:100%;
         height:auto;
-        border-radius:10px;
+        border-radius:12px;
     }
 
     .card-content{
@@ -387,7 +417,10 @@ footer{
         line-height:1.6;
     }
 
-    /* Tools Section */
+    /* =========================
+       TOOLS SECTION
+    ========================= */
+
     .tools{
         display:grid;
         grid-template-columns:repeat(2,1fr);
@@ -395,8 +428,8 @@ footer{
     }
 
     .tool{
-        padding:15px;
         text-align:center;
+        padding:15px;
         font-size:14px;
     }
 
@@ -406,21 +439,34 @@ footer{
         object-fit:contain;
     }
 
-    /* Buttons */
+    /* =========================
+       BUTTONS
+    ========================= */
+
     .btn{
         display:inline-block;
-        padding:12px 20px;
-        font-size:14px;
+        width:100%;
+        text-align:center;
+        padding:12px 18px;
+        font-size:15px;
+        margin-top:10px;
+        box-sizing:border-box;
     }
 
-    /* About / Content */
-    .about p,
-    .content p{
+    /* =========================
+       ABOUT SECTION
+    ========================= */
+
+    .about p{
         font-size:15px;
         line-height:1.8;
+        text-align:center;
     }
 
-    /* Contact Section */
+    /* =========================
+       CONTACT SECTION
+    ========================= */
+
     .contact{
         text-align:center;
     }
@@ -429,10 +475,14 @@ footer{
         word-break:break-word;
     }
 
-    /* Footer */
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer{
         text-align:center;
         padding:20px;
         font-size:14px;
     }
+
 }
